@@ -28,9 +28,9 @@ export class Header3Component implements OnInit {
   }
   logout() {
     this.provider.logout().then( res => {
-      this.provider.logged = false;
       localStorage.clear();
+      this.provider.logged = false;
     });
-    this.router.navigate([{outlets: {primary: '/' , header: '/'}}]);
+    this.router.navigate([{outlets: {primary: 'login', header: 'header'}}]);
   }
 }
