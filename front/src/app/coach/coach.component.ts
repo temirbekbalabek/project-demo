@@ -13,7 +13,7 @@ export class CoachComponent implements OnInit {
   constructor(private router: Router, private provider: ProviderService) { }
 
   ngOnInit() {
-    this.provider.getCoaches(this.provider.curGym).then(res => {
+    this.provider.getCoaches(JSON.parse(localStorage.getItem('currentGym'))).then(res => {
       this.coaches = res;
       // this.router.navigateByUrl('coach');
     });

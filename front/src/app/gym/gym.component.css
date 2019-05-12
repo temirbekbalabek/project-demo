@@ -1,7 +1,8 @@
 p {
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
-
+.aboutGym {
+}
 .gymName {
   text-align: center;
   font-size: 24px;
@@ -15,7 +16,7 @@ p {
   border-radius: 8px;
 }
 .gym {
-  margin-left: 200px;
+  text-align: center;
 }
 .gym figure{
   float: left;
@@ -26,6 +27,7 @@ p {
 }
 .photoGym {
   float: left;
+  margin-left: 220px;
 }
 .scrollbar {
   font-size: 20px;
@@ -49,5 +51,5 @@ table {
   color: white;
   font-family: ProximaNova-Regular,Arial,sans-serif;
   margin-top: 50px;
-  margin-left: 7%;
+  margin-left: 300px;
 }

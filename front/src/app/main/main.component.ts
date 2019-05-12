@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
       //   this.provider.logged = true;
       // }
       // if (this.provider.logged === true) {
-    this.provider.getGyms().then(res => {
+      this.provider.getGyms().then(res => {
       this.gyms = res;
     });
         // localStorage.setItem('gymClicked', 'true');

@@ -23,9 +23,12 @@ export class HeaderComponent implements OnInit {
     // localStorage.setItem('login', 'false');
     // this.login = JSON.parse(localStorage.getItem('login'));
   }
+  x() {
+    this.authlogin = false;
+  }
 
   getAbout() {
-    this.router.navigateByUrl('about');
+    this.router.navigate([{outlets: {primary: 'about'}}]);
   }
   auth() {
     if (this.username !== '' && this.password !== '') {
