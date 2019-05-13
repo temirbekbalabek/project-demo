@@ -1,17 +1,39 @@
-.header1 img {
-  max-width: 30%;
+.logo img {
+  height: 100px;
+  width: 200px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+  /*background-color: black;*/
+}
+.logo {
+  width: 100px;
+  height: 150px;
+  /*background-color: black;*/
+  display: inline-block;
+
+}
+.logo h2 {
+  color: red;
+  background-color: #141414;
+  width: 180px;
+  font-weight: bold;
+  padding-left: 25px;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.afterlogo {
+  width: 400px;
+  float: right;
+  margin-top: 65px;
+  /*background-color: black;*/
 }
 button {
   cursor: pointer;
-}
-.header1 {
-  /*opacity: 0.7;*/
 }
 .ofitness {
   cursor: pointer;
   color: white;
   padding: 14px 16px;
-  margin-top: 30px;
   font-family: 'Open Sans',sans-serif;
   text-decoration: none;
   background-color: #1c2833;
@@ -24,16 +46,15 @@ button {
   border-radius: 8px;
 }
 .ofitness:hover {
-  color: black;
+  color: red;
 }
 .login {
   cursor: pointer;
   color: white;
   padding: 14px 16px;
-  margin-top: 30px;
   font-family: 'Open Sans',sans-serif;
   text-decoration: none;
-  background-color: orangered;
+  background-color: green;
   text-align: center;
   font-size: 16px;
   font-weight: bold;
@@ -51,11 +72,26 @@ button {
   margin-left: 65px;
   margin-bottom: 20px;
 }
-.background {
+.background1 {
   position: fixed;
   z-index: 1;
   width: 600px;
   height: 400px;
+  padding-top: 80px;
+  text-align: center;
+  /*padding-bottom: 0;*/
+  border: 1px solid black;
+  margin-left: 525px;
+  border-radius: 20px;
+  /*-webkit-filter: blur(2px);*/
+  background-color: white;
+  opacity: 0.5;
+}
+.background2 {
+  position: fixed;
+  z-index: 1;
+  width: 600px;
+  height: 540px;
   padding-top: 80px;
   text-align: center;
   /*padding-bottom: 0;*/
@@ -81,7 +117,18 @@ button {
   z-index: 2;
   position: fixed;
   width: 600px;
-  height: 500px;
+  height: 480px;
+  text-align: center;
+  /*padding-bottom: 0;*/
+  border: 1px solid black;
+  margin-left: 525px;
+  border-radius: 20px;
+}
+.registration {
+  z-index: 2;
+  position: fixed;
+  width: 600px;
+  height: 620px;
   text-align: center;
   /*padding-bottom: 0;*/
   border: 1px solid black;
@@ -89,13 +136,23 @@ button {
   border-radius: 20px;
 }
 .loginbutton button {
-  margin-top: 15px;
   width: 150px;
-  background-color: #3897f0;
+  background-color: green;
   /*background-color: black;*/
   border: 0;
   border-radius: 8px;
   height: 60px;
+  color: white;
+  font-size: 16px;
+}
+.regbutton button {
+  margin-top: 10px;
+  width: 150px;
+  background-color: #4b62ff;
+  /*background-color: black;*/
+  border: 0;
+  border-radius: 8px;
+  height: 40px;
   color: white;
   font-size: 16px;
 }
@@ -106,23 +163,31 @@ button {
   border-radius: 6px;
   text-align: center;
   border: 0;
+  font-size: 22px;
 }
-#logout {
-  color: white;
-  background-color: #a70800;
-  font-family: Open Sans,sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  height: 47px;
-  border-radius: 4px;
-  margin-left: 20px;
-  width: 170px;
-  float: right;
-  margin-top: 30px;
+.registration div input {
+  height: 40px;
+  width: 300px;
+  border-radius: 6px;
+  text-align: center;
   border: 0;
 }
-#logout:hover {
-  font-family: Open Sans,sans-serif;
-  color: black;
-  cursor: pointer;
-}
+/*#logout {*/
+/*  color: white;*/
+/*  background-color: #a70800;*/
+/*  font-family: Open Sans,sans-serif;*/
+/*  font-size: 16px;*/
+/*  font-weight: bold;*/
+/*  height: 47px;*/
+/*  border-radius: 4px;*/
+/*  margin-left: 20px;*/
+/*  width: 170px;*/
+/*  float: right;*/
+/*  margin-top: 30px;*/
+/*  border: 0;*/
+/*}*/
+/*#logout:hover {*/
+/*  font-family: Open Sans,sans-serif;*/
+/*  color: black;*/
+/*  cursor: pointer;*/
+/*}*/

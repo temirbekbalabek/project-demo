@@ -1,3 +1,31 @@
+.detail {
+  background: none;
+  border: 2px solid yellow;
+  border-radius: 40px;
+  position: absolute;
+  color: yellow;
+  font-size: 40px;
+  margin-top: 400px;
+  margin-left: 180px;
+  width: 280px;
+  height: 60px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.detail:hover {
+  background-color: #c80a28;
+}
+.quote {
+  /*background-color: red;*/
+  position: absolute;
+  color: #b4c8c4;
+  font-size: 46px;
+  width: 650px;
+  font-weight: bolder;
+  font-family: "Segoe UI Black";
+}
+
+/************************new above *************************/
 .authorization {
   width: 100%;
   /*padding-top: 80px;*/

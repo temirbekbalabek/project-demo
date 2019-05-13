@@ -18,6 +18,13 @@ export class CoachComponent implements OnInit {
       // this.router.navigateByUrl('coach');
     });
   }
+  coachDetail(coach: ICoach) {
+    // this.provider.getCoachInfo(JSON.parse(localStorage.getItem('currentGym')), coach).then( res => {
+    //   this.coach = res;
+    // });
+    localStorage.setItem('currentCoach', JSON.stringify(coach));
+    this.router.navigate([{outlets: {primary: 'coachinfo', header: 'header3'}}]);
+  }
   // getCoaches() {
   //   this.provider.getCoaches(this.provider.curGym).then(res => {
   //     this.coaches = res;

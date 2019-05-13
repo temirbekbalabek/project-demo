@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {IFeedback} from '../shared/models/models';
+import {IClient, IFeedback} from '../shared/models/models';
 import {ProviderService} from '../shared/services/provider.service';
 import {Router} from '@angular/router';
 
@@ -10,12 +10,25 @@ import {Router} from '@angular/router';
 })
 export class FeedbackComponent implements OnInit {
   feedbacks: IFeedback[] = [];
+  clientsId: number[] = [];
+  clients: IClient[] = [];
+  client: IClient;
+  comment = '';
   constructor(private router: Router, private provider: ProviderService) { }
 
   ngOnInit() {
     this.provider.getFeedback(JSON.parse(localStorage.getItem('currentGym'))).then( res => {
       this.feedbacks = res;
+      for (const a of this.feedbacks) {
+        this.clientsId.push(a.client_id);
+      }
+      for ( const b of this.clientsId) {
+        this.provider.getClient(b).then(r => {
+          this.clients.push(r);
+        });
+      }
+      // console.log(this.clients);
     });
   }
-
+  sendFeedback() {}
 }

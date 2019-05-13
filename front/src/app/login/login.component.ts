@@ -15,6 +15,9 @@ export class LoginComponent implements OnInit {
     localStorage.clear();
     localStorage.setItem('gymClicked', 'false');
   }
+  detail() {
+    this.router.navigate([{outlets: {primary: 'main', header: 'header2'}}]);
+  }
   // auth() {
   //   if (this.username !== '' && this.password !== '') {
   //     this.provider.auth(this.username, this.password).then( res => {

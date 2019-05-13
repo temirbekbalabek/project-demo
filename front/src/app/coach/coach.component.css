@@ -7,4 +7,13 @@
   height: 400px;
   border-radius: 8px;
   border: 8px double black;
+  cursor: pointer;
+}
+.coaches {
+
+  text-align: center;
+}
+h1 {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  text-align: center;
 }

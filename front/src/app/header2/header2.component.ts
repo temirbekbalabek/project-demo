@@ -40,7 +40,7 @@ export class Header2Component implements OnInit {
 
   log() {
     if (JSON.parse(localStorage.getItem('login')) === true) {
-      alert('You already logged');
+      alert('You have already logged in');
     } else {
       this.authlogin = true;
       //   localStorage.setItem('login', 'true');

@@ -18,6 +18,7 @@ import { CoachComponent } from './coach/coach.component';
 import { ExternalComponent } from './external/external.component';
 import { Header2Component } from './header2/header2.component';
 import { Header3Component } from './header3/header3.component';
+import { CoachinfoComponent } from './coachinfo/coachinfo.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { Header3Component } from './header3/header3.component';
     ExternalComponent,
     Header2Component,
     Header3Component,
+    CoachinfoComponent,
   ],
   imports: [
     BrowserModule,
