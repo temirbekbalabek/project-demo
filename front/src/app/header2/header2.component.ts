@@ -47,11 +47,7 @@ export class Header2Component implements OnInit {
       //   this.login = JSON.parse(localStorage.getItem('login'));
     }
   }
-  logout() {
-    this.provider.logout().then( res => {
-      localStorage.clear();
-      this.provider.logged = false;
-    });
-    this.router.navigate([{outlets: {primary: 'login', header: 'header'}}]);
+  toMainPage() {
+    this.router.navigate([{outlets: {primary: 'login'}}]);
   }
 }

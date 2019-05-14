@@ -4,6 +4,7 @@
   padding-bottom: 0;
   margin-bottom: 0;
   /*background-color: black;*/
+  cursor: pointer;
 }
 .logo {
   width: 100px;
@@ -46,24 +47,6 @@ button {
 }
 .ofitness:hover {
   color: red;
-}
-.login {
-  cursor: pointer;
-  color: white;
-  padding: 14px 16px;
-  font-family: 'Open Sans',sans-serif;
-  text-decoration: none;
-  background-color: green;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  width: 150px;
-  float: right;
-  border-radius: 8px;
-  margin-top: 15px;
-}
-.login:hover {
-  color: black;
 }
 .authorization img {
   margin-top: 60px;
@@ -143,6 +126,7 @@ button {
   float: right;
   margin-top: 15px;
   border: 0;
+  margin-right: 20px;
 }
 #logout:hover {
   font-family: Open Sans,sans-serif;

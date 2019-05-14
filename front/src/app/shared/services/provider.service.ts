@@ -11,6 +11,7 @@ export class ProviderService extends MainService {
   public gymClicked = false;
   public curGym: IGym;
   public gymId: number;
+  public curCoach: ICoach;
   constructor(http: HttpClient) {
     super(http);
   }
@@ -33,6 +34,9 @@ export class ProviderService extends MainService {
   getAbout(): Promise<IAbout[]> {
     return this.get('http://localhost:8000/api/about/', {});
   }
+  getClients(gid: number): Promise<IClient[]> {
+    return this.get(`http://localhost:8000/api/gym_lists/${gid}/client_list/`, {});
+  }
   getClient(clientId: number): Promise<IClient> {
     this.gymId = JSON.parse(localStorage.getItem('currentGym')).id;
     console.log(this.gymId);
@@ -53,7 +57,8 @@ export class ProviderService extends MainService {
       email: e,
       phone: ph,
       status: st,
-      gym_id: gymId
+      image: 'https://cdn1.vectorstock.com/i/1000x1000/82/55/anonymous-user-circle-icon-vector-18958255.jpg',
+      gym_id: gymId,
     });
   }
 }

@@ -16,5 +16,8 @@ export class GymComponent implements OnInit {
     const obj = JSON.parse(localStorage.getItem('currentGym'));
     this.provider.curGym = obj;
     this.curGym = obj;
+    // this.provider.getCoaches(JSON.parse(localStorage.getItem('currentGym'))).then(res => {
+    //   localStorage.setItem('coaches', JSON.stringify(res));
+    // });
   }
 }

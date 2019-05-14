@@ -23,7 +23,6 @@ export class MainComponent implements OnInit {
       this.provider.getGyms().then(res => {
       this.gyms = res;
     });
-        // localStorage.setItem('gymClicked', 'true');
       // }
   }
   getGymInfo(gym: IGym) {

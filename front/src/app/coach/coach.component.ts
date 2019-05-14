@@ -22,6 +22,7 @@ export class CoachComponent implements OnInit {
     // this.provider.getCoachInfo(JSON.parse(localStorage.getItem('currentGym')), coach).then( res => {
     //   this.coach = res;
     // });
+    this.provider.curCoach = coach;
     localStorage.setItem('currentCoach', JSON.stringify(coach));
     this.router.navigate([{outlets: {primary: 'coachinfo', header: 'header3'}}]);
   }

@@ -32,6 +32,7 @@ export interface IClient {
   phone: string;
   status: string;
   image: string;
+  gym_id: number;
 }
 export interface ITest {
   id: number;

@@ -47,52 +47,6 @@ export class HeaderComponent implements OnInit {
   getAbout() {
     this.router.navigate([{outlets: {primary: 'about'}}]);
   }
-  auth() {
-    if (this.username !== '' && this.password !== '') {
-      this.provider.auth(this.username, this.password).then(res => {
-        localStorage.setItem('token', res.token);
-        console.log(localStorage.getItem('token'));
-      });
-      localStorage.setItem('login', 'true');
-      this.login = JSON.parse(localStorage.getItem('login'));
-      console.log('OK');
-      this.router.navigate([{outlets: {primary: 'main' , header: 'header2'}}]);
-      this.authlogin = false;
-    } else {
-      alert('Заполните все поля!');
-    }
-  }
-  reg() {
-    this.registered = true;
-  }
-  register() {
-    if (this.username !== '' && this.password !== '' && this.name !== '' && this.surname !== '') {
-      if (this.password2 !== '' && this.email !== '' && this.phone !== '' && this.status !== '') {
-        if (this.password === this.password2) {
-          console.log('registered' + this.password + this.password2);
-          this.provider.createClient(2, this.name, this.surname, this.username,
-            this.password, this.email, this.phone, this.status).then( res => {
-            console.log('Client created');
-            this.provider.auth(this.username, this.password).then(ress => {
-              localStorage.setItem('token', ress.token);
-              console.log(localStorage.getItem('token'));
-            });
-            localStorage.setItem('login', 'true');
-            this.login = JSON.parse(localStorage.getItem('login'));
-            console.log('OK');
-            this.router.navigate([{outlets: {primary: 'main' , header: 'header2'}}]);
-            this.authlogin = false;
-          });
-        } else {
-          alert('You write two different password');
-        }
-      } else {
-        alert('Заполните все поля!');
-      }
-    } else {
-      alert('Заполните все поля!');
-    }
-  }
   toMainPage() {
     this.router.navigate([{outlets: {primary: 'login'}}]);
   }
@@ -101,8 +55,6 @@ export class HeaderComponent implements OnInit {
       alert('You already logged');
     } else {
       this.authlogin = true;
-      //   localStorage.setItem('login', 'true');
-      //   this.login = JSON.parse(localStorage.getItem('login'));
     }
   }
 }
