@@ -30,5 +30,23 @@ export class FeedbackComponent implements OnInit {
       // console.log(this.clients);
     });
   }
-  sendFeedback() {}
+  sendFeedback() {
+    this.client = JSON.parse(localStorage.getItem('client'));
+    const token = localStorage.getItem('token');
+    if (token) {
+      alert(`Admins shouldn't leave any comments`);
+    }
+    if (this.client) {
+      if (this.comment !== '') {
+        this.provider.sendFeedback(this.comment).then( res => {
+          alert('Thank you for your comment!');
+        });
+      } else {
+        alert('Sorry, you can not leave an empty feedback');
+      }
+    }
+    if (!this.client && !token) {
+      alert('Sorry, you should login to the current gym');
+    }
+  }
 }

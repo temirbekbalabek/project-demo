@@ -45,9 +45,14 @@ export class ProviderService extends MainService {
   getFeedback(gym: IGym): Promise<IFeedback[]> {
     return this.get(`http://localhost:8000/api/gym_lists/${gym.id}/feedback/`, {});
   }
-  // sendFeedback(comment: string): Promise<any> {
-  //   return this.post(`http://localhost:8000/api/gym_lists/${JSON.parse(localStorage.getItem('currentGym')).id}/feedback/`, {});
-  // }
+  sendFeedback(commentt: string): Promise<any> {
+    return this.post(`http://localhost:8000/api/gym_lists/${JSON.parse(localStorage.getItem('currentGym')).id}/feedback/`, {
+      client_id: JSON.parse(localStorage.getItem('client')).id,
+      date: '2019-04-26T13:20:52Z',
+      comment: commentt,
+      gym_id: JSON.parse(localStorage.getItem('currentGym')).id,
+    });
+  }
   createClient(gymId: number, n: string, s: string, u: string, p: string, e: string, ph: string, st: string): Promise <IClient> {
     return this.post(`http://localhost:8000/api/gym_lists/${gymId}/client_list/`, {
       name: n,

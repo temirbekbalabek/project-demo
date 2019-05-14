@@ -20,7 +20,9 @@ export class MainComponent implements OnInit {
       //   this.provider.logged = true;
       // }
       // if (this.provider.logged === true) {
-      this.provider.getGyms().then(res => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('client');
+    this.provider.getGyms().then(res => {
       this.gyms = res;
     });
       // }
